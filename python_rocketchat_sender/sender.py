@@ -1,3 +1,9 @@
+''' 
+Environment Variables Required:
+- ROCKETCHAT_SERVER_URL
+- USER_ID
+- AUTH_TOKEN
+'''
 import os
 import requests
 
