@@ -1,5 +1,5 @@
 ''' 
-Environment Variables Required:
+Required Environment Variables:
 - ROCKETCHAT_SERVER_URL
 - USER_ID
 - AUTH_TOKEN
