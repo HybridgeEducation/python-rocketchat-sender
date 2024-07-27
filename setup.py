@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name='python_rocketchat_sender',
-    version='0.2',
+    version='0.3',
     packages=find_packages(),
     install_requires=[
         'requests'
     ],
     description='Send Rocket Chat messages to your server',
     author='Gerardo Mathus',
-    author_email='gerardo@hybridge.education',
+    author_email='gerardo@nextia.mx',
     url='https://github.com/hybridgeeducation/python-rocketchat-sender',  
     classifiers=[
         'Programming Language :: Python :: 3',

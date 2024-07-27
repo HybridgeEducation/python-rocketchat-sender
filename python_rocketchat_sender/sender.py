@@ -3,18 +3,18 @@ import requests
 
 class Sender:
     ROCKETCHAT_SERVER_URL = os.getenv('ROCKETCHAT_SERVER_URL')
-    BOT_USER_ID = os.getenv('BOT_USER_ID')
-    BOT_TOKEN = os.getenv('BOT_TOKEN')
+    USER_ID = os.getenv('USER_ID')
+    AUTH_TOKEN = os.getenv('AUTH_TOKEN')
 
     @staticmethod
     def send(room_id, message):
-        if not Sender.ROCKETCHAT_SERVER_URL or not Sender.BOT_USER_ID or not Sender.BOT_TOKEN:
-            raise ValueError("ROCKETCHAT_SERVER_URL, BOT_USER_ID, and BOT_TOKEN must be set")
+        if not Sender.ROCKETCHAT_SERVER_URL or not Sender.USER_ID or not Sender.AUTH_TOKEN:
+            raise ValueError("ROCKETCHAT_SERVER_URL, USER_ID, and AUTH_TOKEN must be set")
         
         url = f"{Sender.ROCKETCHAT_SERVER_URL}/api/v1/chat.postMessage"
         headers = {
-            'X-User-Id': Sender.BOT_USER_ID,
-            'X-Auth-Token': Sender.BOT_TOKEN,
+            'X-User-Id': Sender.USER_ID,
+            'X-Auth-Token': Sender.AUTH_TOKEN,
             'Content-Type': 'application/json',
         }
         payload = {
